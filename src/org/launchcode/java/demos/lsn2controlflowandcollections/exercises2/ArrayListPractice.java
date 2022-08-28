@@ -10,18 +10,20 @@ public class ArrayListPractice {
 
         Scanner input = new Scanner(System.in);
 
-        ArrayList<Integer> someIntegers = new ArrayList<>(Arrays.asList(1,2,3,4,5,6));
-        System.out.println(sumEven(someIntegers));
+       /* ArrayList<Integer> someIntegers = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        System.out.println(sumEven(someIntegers)); */
 
         String phrase = "I would not, could not, in a box. I would not, could not with a fox. " +
                 "I will not eat them in a house. I will not eat them with a mouse.";
+
+
 
         ArrayList<String> wordList = new ArrayList<>(Arrays.asList(phrase.split(" ")));
 
         printFiveLetterWords(wordList);
         }
 
-    public static Integer sumEven(ArrayList<Integer> myArray){
+   /* public static Integer sumEven(ArrayList<Integer> myArray){
         int total = 0;
         for(int integer: myArray){
             if(integer%2 == 0){
@@ -30,9 +32,14 @@ public class ArrayListPractice {
         }
         return total;
     }
+
+    */
     public static void printFiveLetterWords(ArrayList<String> arr){
         for(String word: arr){
-            if(word.length() == 5){
+            Scanner input = new Scanner(System.in);
+            System.out.println("Please enter the length of a word: ");
+            int numChars = input.nextInt();
+            if(word.length() == numChars){
                 System.out.println(word);
             }
         }
